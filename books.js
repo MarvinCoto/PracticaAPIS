@@ -9,17 +9,17 @@ const getBooksInfo = async () => {
         
         const data = await response.json();
         const cardsParent = document.getElementById('cards');
-console.log( data.data)
-        data.id.forEach(id => {
+console.log( data)
+        data.forEach(data => {
             const card = document.createElement('div');
             card.innerHTML = `
                 <div class="bg-white shadow-md rounded-lg overflow-hidden">
         
 
                     <div class="p-4">
-                        <h2 class="text-xl font-bold mb-2">${id.title}</h2>
+                        <h2 class="text-xl font-bold mb-2">${data.title}</h2>
 
-                        <p class="text-gray-700">${id.completed}</p>
+                        <p class="text-gray-700">${data.completed}</p>
                     </div>
                 </div>  
             `;
@@ -34,7 +34,7 @@ console.log( data.data)
 
 
 const getBooksInfo2 = () => {
-    fetch('https://dogapi.dog/api/v2/breeds')
+    fetch('https://jsonplaceholder.typicode.com/todos')
         .then(response => response.json())
         .then(data => console.log(data))
         .catch(error => console.error('Error:', error));
