@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAP</title>
+</head>
+<body>
+    
+    <script>
+        let codigos = ["20230644", "20240161", "2020071", "20220254"]
+        let correo = "@ricaldone.edu.sv";
+
+        let correosRicaldone = codigos.map(codigos => codigos + correo);
+
+        console.log(correosRicaldone);
+
+        let nombres = ["Marvin Coto", "Wilfredo Granados", "Levi Miranda", "Josue Jovel"]
+        let seccion = "3° A-2";
+
+        let infoEstudiantes = nombres.map(nombres => nombres + " Sección: " + seccion);
+
+        console.log(infoEstudiantes);
+    </script>
+    
+</body>
+</html>
